@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Welcome Back</h2>
+        <form action="{{ url_for('login') }}" method="POST" class="space-y-4">
+            <div class="text-center">
+                <button class="w-full flex items-center justify-center bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600">
+                    <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 5l-6 6m0 0l6 6m-6-6H4"></path>
+                    </svg>
+                    Sign in with Google
+                </button>
+            </div>
+            <div class="relative flex items-center justify-center">
+                <span class="absolute bg-white px-2 text-gray-500">or</span>
+                <div class="w-full border-t border-gray-300"></div>
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                <input type="email" name="email" id="email" class="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter your email" required>
+            </div>
+            <div>
+                <label for="password" class="block text-gray-700 font-medium">Password</label>
+                <input type="password" name="password" id="password" class="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Enter your password" required>
+            </div>
+            <div>
+                <button type="submit" class="w-full bg-orange-500 text-white py-2 px-4 rounded-lg hover:bg-orange-600">
+                    Sign In
+                </button>
+            </div>
+        </form>
+        <p class="text-sm text-center text-gray-600 mt-4">
+            Don't have an account? <a href="#" class="text-blue-500 hover:underline">Sign Up</a>
+        </p>
+    </div>
+</body>
+</html>
